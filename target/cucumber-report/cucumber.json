@@ -1,0 +1,199 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1093960594,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "User has set the Request Base URI",
+            "match": {
+              "location": "BackgroundSteps.setBaseURI()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "Availability Request",
+        "description": "",
+        "id": "roomavailability;availability-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5268590890,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User makes the room availability request",
+            "match": {
+              "location": "BookingSteps.availabilityRequest(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "api_version",
+                  "1"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "hotel_item_id",
+                  "1"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "hotel_partner_reference",
+                  "abc123"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "start_date",
+                  "2019-10-21"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "end_date",
+                  "2019-10-23"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "adults",
+                  "2"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "children",
+                  "1"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "lang",
+                  "en_US"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "currency",
+                  "USD"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "user_country",
+                  "US"
+                ],
+                "line": 16
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13024642,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Verify responded API version, dates, and user country are identical to requested ones",
+            "match": {
+              "location": "BookingSteps.verifyApiVersionDateAndCountry()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 13714121,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Verify that hotel_details contains name,address1 and city of type string and a valid url",
+            "match": {
+              "location": "BookingSteps.verifyHotelDetails()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 53734,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Verify that the room_types_array contains at least one entry, or more",
+            "match": {
+              "location": "BookingSteps.verifyRoomTypesArray()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 100826,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Verify that the responded room has a name and its data format is type string with at least 3 letters",
+            "match": {
+              "location": "BookingSteps.verifyRoomDetails()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 132824,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Verify that the responded room has a final_price_at_booking and/or a final_price_at_checkout",
+            "match": {
+              "location": "BookingSteps.verifyRoomPrice()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7742456,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Verify that the start_date is before the end_date",
+            "match": {
+              "location": "BookingSteps.verifyStartAndEndDates()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "RoomAvailability",
+    "description": "",
+    "id": "roomavailability",
+    "keyword": "Feature",
+    "uri": "Booking.feature"
+  }
+]
